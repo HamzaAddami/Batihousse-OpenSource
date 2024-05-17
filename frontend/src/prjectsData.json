@@ -1,0 +1,63 @@
+[
+    {
+      "id": 1,
+      "name": "Product A",
+      "categorie": "Bureaux",
+      "description": "A high-quality electronic device with advanced features.",
+      "avancement": 75,
+      "state": "In Development",
+      "capacite": 100,
+      "mission": "To enhance user connectivity and productivity."
+    },
+    {
+      "id": 2,
+      "name": "Product B",
+      "categorie": "Commerces",
+      "description": "A durable and efficient home appliance designed for modern households.",
+      "avancement": 60,
+      "state": "Prototype",
+      "capacite": 200,
+      "mission": "To simplify and improve home living."
+    },
+    {
+      "id": 3,
+      "name": "Product C",
+      "categorie": "Industriels",
+      "description": "An innovative automotive product for enhanced driving experience.",
+      "avancement": 100,
+      "state": "In Production",
+      "capacite": 500,
+      "mission": "To provide a safer and more enjoyable driving experience."
+    },
+    {
+      "id": 4,
+      "name": "Product D",
+      "categorie": "Touristiques",
+      "description": "A powerful software solution for business management.",
+      "avancement": 100,
+      "state": "Released",
+      "capacite": "N/A",
+      "mission": "To streamline business operations and increase efficiency."
+    },
+    {
+      "id": 5,
+      "name": "Product E",
+      "categorie": "Immeubles",
+      "description": "A cutting-edge healthcare product for patient monitoring.",
+      "avancement": 40,
+      "state": "Concept",
+      "capacite": 50,
+      "mission": "To improve patient care and health outcomes."
+    },
+    {
+      "id": 6,
+      "name": "Product F",
+      "categorie": "Residentiels-Villas",
+      "description": "An interactive educational tool for enhanced learning.",
+      "avancement": 100,
+      "state": "Beta Testing",
+      "capacite": "N/A",
+      "mission": "To make learning more engaging and effective."
+    }
+  ]
+  

@@ -1,0 +1,32 @@
+@import url('https://fonts.cdnfonts.com/css/keep-dancing');
+@import url('https://fonts.cdnfonts.com/css/roboto');
+@import url('https://fonts.cdnfonts.com/css/elaine-sans');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+#font {
+    font-family: 'Keep Dancing', sans-serif;
+}
+#font-family {
+    font-family: 'Roboto', sans-serif;
+}
+#slimar {
+    font-family: 'Elaine Sans', sans-serif; 
+                                                
+}
+#BackToTheTopButton {
+    font-family: 'Roboto', sans-serif;
+    @apply animate-bounce w-[50px] h-[50px] bg-quaternary font-semibold flex items-center justify-center shadow-[0px_0px_0px_4px_#E4C59E] cursor-pointer duration-[0.3s] overflow-hidden fixed rounded-[50%] border-[none] right-7 bottom-10 hover:w-[140px] hover:duration-[0.3s] hover:bg-quaternary hover:items-center hover:rounded-[50px] before:absolute before:content-["Retour_au_Top"] before:text-[white] before:text-[0px] before:-bottom-5 hover:before:text-[13px] hover:before:opacity-100 hover:before:duration-[0.3s] hover:before:bottom-[unset];
+  }
+  .svgIconBackToTheTopButton {
+    @apply w-3 duration-[0.3s];
+  }
+  .svgIconBackToTheTopButton path {
+    @apply fill-[white];
+  }
+  #BackToTheTopButton:hover .svgIconBackToTheTopButton {
+    @apply duration-[0.3s] translate-y-[-200%] ;
+   
+  }
