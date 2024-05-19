@@ -7,7 +7,8 @@ import References from '../pages/References';
 import Layout from "../layouts/layout.jsx";
 
 
-export const router = createBrowserRouter([
+export const router = 
+    createBrowserRouter([
     {
         
         element: <Layout />,
@@ -22,3 +23,4 @@ export const router = createBrowserRouter([
     }
     
 ]);
+

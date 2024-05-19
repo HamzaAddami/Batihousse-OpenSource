@@ -24,7 +24,7 @@ return new class extends Migration
             $table->foreignId('category_id')->constrained('categories')->onDelete('cascade');  // Correct foreign key naming and table reference
             $table->timestamps();
         });
-        
+
     }
 
     /**
