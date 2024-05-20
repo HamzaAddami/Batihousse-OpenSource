@@ -45,7 +45,7 @@ const Navbar = () => {
         <nav
             className={`w-full z-30 lg:p-0 lg:px-0 lg:pt-0 md:pt-0 bg-secondary transform duration-500 ${
                 stickyClass ? "fixed top-0" : "block"
-            } ${isScrollingDown ? "-top-20" : "top-0"} transition-transform duration-300`}
+            } ${isScrollingDown ? "-translate-y-full" : "translate-y-0"} transition-transform duration-300`}
         >
             <div className="flex flex-row justify-between p-5 px-5">
                 <div className="lg:flex hidden ml-6">
