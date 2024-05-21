@@ -22,7 +22,7 @@ class ProjectsSeeder extends Seeder
                 'mission' => 'Etudes clés en main',
                 'avancement' => 10,
                 'state' => 'En cours',
-                'image_path' => 'path/to/image_alpha.jpg',
+                'image_path' => 'Pictures/pict1.webp',
                 'category_id' => 2,  
             ],
             [
@@ -33,7 +33,7 @@ class ProjectsSeeder extends Seeder
                 'mission' => 'OPC interne de l’entreprise générale.',
                 'avancement' => 100,
                 'state' => 'Réaliser',
-                'image_path' => 'path/to/image_beta.jpg',
+                'image_path' => 'Pictures/pict2.webp',
                 'category_id' => 1,  
             ],
             

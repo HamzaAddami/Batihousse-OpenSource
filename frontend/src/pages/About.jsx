@@ -10,11 +10,7 @@ const About = () => {
         loop: {},
     });
 
-    const h2Style =
-        "text-3xl text-primary font-bold tracking-tighter sm:text-4xl md:text-4xl";
-
-    const pStyle =
-        "text-gray-500 dark:text-gray-500 md:text-md/relaxed lg:text-md xl:text-xl/relaxed leading-relaxed";
+    
     return (
         <section class="w-full py-12 mb-4 md:py-24 lg:py-0" id="font-family">
             <div

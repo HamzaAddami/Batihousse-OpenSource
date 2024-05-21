@@ -13,12 +13,15 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        return Projects::with('categories')->get();
+        $projects = Projects::with('categories')->get()->map(function ($project) {
+            // Assuming image_path is the relative path from the public directory
+            $project->image_url = asset($project->image_path);
+            return $project;
+        });
+
+        return response()->json($projects);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
         $validated = $request->validate([
@@ -33,22 +36,20 @@ class ProjectController extends Controller
             'category_id' => 'required|exists:categories,id'
         ]);
 
-        $project = Project::create($validated);
+        $project = Projects::create($validated);
+        $project->image_url = asset($project->image_path);
 
         return response()->json($project, 201);
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show(Projects $project)
     {
-        return $project->load('categories');
+        $project->load('categories');
+        $project->image_url = asset($project->image_path);
+
+        return response()->json($project);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, Projects $project)
     {
         $validated = $request->validate([
@@ -64,13 +65,11 @@ class ProjectController extends Controller
         ]);
 
         $project->update($validated);
+        $project->image_url = asset($project->image_path);
 
         return response()->json($project);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(Projects $project)
     {
         $project->delete();
