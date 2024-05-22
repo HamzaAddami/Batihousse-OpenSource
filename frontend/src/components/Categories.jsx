@@ -1,3 +1,4 @@
+// src/components/CategoryMenu.jsx
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
@@ -63,20 +64,17 @@ const CategoryMenu = () => {
     return (
         <div id="font-family">
             <div
-                class=" text-primary border bg-card text-card-foreground shadow-sm mb-12 bg-quaternary uppercase"
+                className="text-primary border bg-card text-card-foreground shadow-sm mb-12 bg-quaternary uppercase"
                 data-v0-t="card"
             >
-                <div class="py-10 text-center">
+                <div className="py-10 text-center">
                     <h1
-                        class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl"
+                        className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl"
                         id="slimar"
                     >
                         <span className="text-quaternary">\</span>
                         {text}
-                        <Cursor
-                            class="text-primary"
-                            data-v0-t="cursor"
-                        ></Cursor>
+                        <Cursor className="text-primary" data-v0-t="cursor" />
                     </h1>
                 </div>
             </div>
@@ -119,7 +117,7 @@ const CategoryMenu = () => {
                 </button>
             </div>
 
-            <div class="flex flex-wrap items-center justify-center lg:justify-start mb-4">
+            <div className="flex flex-wrap items-center justify-center lg:justify-start mb-4">
                 {filteredProjects.map((project) => (
                     <div
                         key={project.id}
@@ -142,7 +140,7 @@ const CategoryMenu = () => {
                         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
                             <div className="text-center">
                                 <Link
-                                    to={`/projects/${project.name}`}
+                                    to={`/projects/${project.id}`}
                                     className="inline-block px-4 py-2 bg-tertiary text-white rounded-full"
                                 >
                                     Learn More
@@ -154,9 +152,17 @@ const CategoryMenu = () => {
             </div>
 
             {filteredProjects.length === 0 && (
-                <p className="mt-4 text-red-500">
-                    No projects found for this search term or category.
-                </p>
+                <div class="max-w-sm p-4 m-10 mx-auto border border-gray-300 rounded-md shadow max-h-md">
+                    <div class="flex space-x-4 animate-pulse">
+                        <div class="flex-1 py-1 space-y-4">
+                            <div class="w-full h-40 bg-gray-400 rounded"></div>
+                            <div class="space-y-2">
+                                <div class="h-4 bg-gray-400 rounded"></div>
+                                <div class="w-5/6 h-4 bg-gray-400 rounded"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             )}
         </div>
     );

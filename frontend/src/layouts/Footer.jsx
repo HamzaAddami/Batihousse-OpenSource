@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
     return (
         <footer className="bg-white lg:grid lg:grid-cols-5 dark:bg-primary" id="font-family">
@@ -168,48 +170,48 @@ const Footer = () => {
 
                             <ul className="mt-6 space-y-4 text-sm">
                                 <li>
-                                    <a
-                                        href="#"
+                                    <Link
+                                        to='/'
                                         className="text-gray-700 transition hover:opacity-75 dark:text-gray-200 uppercase hover:underline"
                                     >
                                         Accueil
-                                    </a>
+                                    </Link>
                                 </li>
 
                                 <li>
-                                    <a
-                                        href="#"
+                                    <Link
+                                        to='/about'
                                         className="text-gray-700 transition hover:opacity-75 dark:text-gray-200 uppercase hover:underline"
                                     >
                                         QUI SOMMES-NOUS
-                                    </a>
+                                    </Link>
                                 </li>
 
                                 <li>
-                                    <a
-                                        href="#"
+                                    <Link
+                                        to='/metiers'
                                         className="text-gray-700 transition hover:opacity-75 dark:text-gray-200 uppercase hover:underline"
                                     >
                                         NOS Métiers
-                                    </a>
+                                    </Link>
                                 </li>
 
                                 <li>
-                                    <a
-                                        href="#"
+                                    <Link
+                                        to='/references'
                                         className="text-gray-700 transition hover:opacity-75 dark:text-gray-200 uppercase hover:underline"
                                     >
                                         références
-                                    </a>
+                                    </Link>
                                 </li>
 
                                 <li>
-                                    <a
-                                        href="#"
+                                    <Link
+                                        to='/contact'
                                         className="text-gray-700 transition hover:opacity-75 dark:text-gray-200 uppercase hover:underline"
                                     >
                                         Contact
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>

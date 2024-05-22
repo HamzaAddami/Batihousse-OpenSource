@@ -31,7 +31,7 @@ class ProjectController extends Controller
             'price' => 'required|numeric',
             'mission' => 'nullable|string',
             'avancement' => 'required|integer|min:0|max:100',
-            'state' => 'required|string|max:255',
+            'state' => 'required|string',
             'image_path' => 'nullable|string|max:255',
             'category_id' => 'required|exists:categories,id'
         ]);
@@ -59,7 +59,7 @@ class ProjectController extends Controller
             'price' => 'sometimes|required|numeric',
             'mission' => 'nullable|string',
             'avancement' => 'sometimes|required|integer|min:0|max:100',
-            'state' => 'sometimes|required|string|max:255',
+            'state' => 'sometimes|required|string',
             'image_path' => 'nullable|string|max:255',
             'category_id' => 'sometimes|required|exists:categories,id'
         ]);
