@@ -22,14 +22,11 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'name' => 'required|string|max:255'
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
         ]);
 
-        $category = Categories::create([
-            'name' => $request->name
-        ]);
-
+        $category = Categories::create($validated);
         return response()->json($category, 201);
     }
 
@@ -55,14 +52,11 @@ class CategoryController extends Controller
             return response()->json(['message' => 'Category not found'], 404);
         }
 
-        $request->validate([
-            'name' => 'required|string|max:255'
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
         ]);
 
-        $category->update([
-            'name' => $request->name
-        ]);
-
+        $category->update($validated);
         return response()->json($category);
     }
 
@@ -79,5 +73,4 @@ class CategoryController extends Controller
         $category->delete();
         return response()->json(['message' => 'Category deleted successfully']);
     }
-    
 }

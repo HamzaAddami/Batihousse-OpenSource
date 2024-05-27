@@ -22,6 +22,9 @@ class EnsureEmailIsVerified
             return response()->json(['message' => 'Your email address is not verified.'], 409);
         }
 
-        return $next($request);
+        return $next($request)
+        ->header('Access-Control-Allow-Origin', '*')
+        ->header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS')
+        ->header('Access-Control-Allow-Headers', 'Origin, Content-Type, Accept, Authorization');;
     }
 }
